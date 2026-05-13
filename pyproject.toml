@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tehall-global-nav"
+version = "0.1.0"
+description = "Standalone global navigation demo/library extracted from tehall"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["lcm"]
+
+[project.scripts]
+tehall-global-nav = "tehall_global_nav.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
